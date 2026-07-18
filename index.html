@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="《我的父亲》—— 岁月不语，父爱长存。永久珍藏的私人纪念数字馆。" />
+  <title>我的父亲 · 岁月纪念</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+
+  <!-- ============ 模块1：首页全屏开场 ============ -->
+  <header class="hero" id="hero">
+    <div class="hero-bg" data-bg-mode="image"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-inner">
+      <p class="hero-eyebrow reveal">谨以此片</p>
+      <h1 class="hero-title reveal" id="heroTitle">我&nbsp;的&nbsp;父&nbsp;亲</h1>
+      <p class="hero-subtitle reveal">岁月不语 · 父爱长存</p>
+      <div class="hero-divider reveal"><span></span></div>
+      <p class="hero-footnote reveal">丙午年夏 · 谨以此片致敬我一生敬重的父亲</p>
+    </div>
+
+    <a href="#prologue" class="hero-scroll reveal" aria-label="向下滚动">
+      <span class="scroll-line"></span>
+    </a>
+  </header>
+
+  <main>
+
+    <!-- ============ 模块2：岁月序言 ============ -->
+    <section class="prologue" id="prologue">
+      <div class="container narrow">
+        <h2 class="section-title reveal">岁 月 序 言</h2>
+        <div class="section-line reveal"></div>
+
+        <div class="prologue-text">
+          <p class="reveal">
+            父亲，是家门前那棵老槐树下的影子，
+            是黄昏灶台上腾起的炊烟，
+            是我儿时骑在肩头看过的最远的山。
+          </p>
+          <p class="reveal">
+            他一生勤恳，话不多，手却永远温暖；
+            他坦荡温柔，从不与人争，却把整片山河留给了我们。
+            岁月把他的鬓发染成霜白，把他的脚步走成缓坡，
+            却没能带走他眼底那束始终亮着的光。
+          </p>
+          <p class="reveal">
+            那些被时光擦淡的老照片里，藏着我们一家人的来处；
+            那些被他默默扛起的年月里，藏着一个父亲最深的柔情。
+            谨以这方寸之地，存他一生剪影，留我永恒思念。
+          </p>
+          <p class="reveal prologue-sign">—— 致我一生敬重的父亲</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 模块3：老照片修复时光集 ============ -->
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <h2 class="section-title reveal">老 照 片 时 光 集</h2>
+        <div class="section-line reveal"></div>
+        <p class="section-desc reveal">两本相册，一段岁月。左边是时光的印记，右边是我们为他擦亮的光。</p>
+
+        <!-- 相册切换 -->
+        <div class="gallery-tabs reveal">
+          <button class="tab-btn active" data-tab="original">
+            <span class="tab-zh">岁月黑白原版</span>
+            <span class="tab-en">Original · Unrestored</span>
+          </button>
+          <button class="tab-btn" data-tab="restored">
+            <span class="tab-zh">高清彩色修复珍藏</span>
+            <span class="tab-en">Restored · In Color</span>
+          </button>
+        </div>
+
+        <!-- 原版相册 -->
+        <div class="gallery-grid active" data-album="original">
+          <!-- 照片由 JS 动态注入 -->
+        </div>
+
+        <!-- 修复相册 -->
+        <div class="gallery-grid" data-album="restored">
+          <!-- 照片由 JS 动态注入 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 模块4：人生瞬间精选 ============ -->
+    <section class="moments" id="moments">
+      <div class="container">
+        <h2 class="section-title reveal">人 生 瞬 间 精 选</h2>
+        <div class="section-line reveal"></div>
+        <p class="section-desc reveal">一帧单人，一帧合影，一帧旅途。三种凝视，一段人生。</p>
+
+        <div class="moments-grid">
+          <figure class="moment-card moment-tall reveal">
+            <div class="moment-img" data-src="assets/images/moments/m-portrait.jpg" data-caption="父亲单人证件老照"></div>
+            <figcaption>
+              <span class="moment-label">独 影</span>
+              <span class="moment-note">父亲单人证件老照</span>
+            </figcaption>
+          </figure>
+
+          <figure class="moment-card moment-wide reveal">
+            <div class="moment-img" data-src="assets/images/moments/m-duo.jpg" data-caption="双人合影老照"></div>
+            <figcaption>
+              <span class="moment-label">同 行</span>
+              <span class="moment-note">双人合影老照</span>
+            </figcaption>
+          </figure>
+
+          <figure class="moment-card moment-tall reveal">
+            <div class="moment-img" data-src="assets/images/moments/m-family.jpg" data-caption="家庭旅途现代照"></div>
+            <figcaption>
+              <span class="moment-label">归 途</span>
+              <span class="moment-note">家庭旅途现代照</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 模块5：纪念视频专属播放区 ============ -->
+    <section class="video-section" id="video">
+      <div class="container">
+        <h2 class="section-title reveal">纪 念 短 片</h2>
+        <div class="section-line reveal"></div>
+        <p class="section-desc reveal">《我的父亲》—— 完整纪念短片</p>
+
+        <div class="video-wrap reveal">
+          <div class="video-glow"></div>
+          <video
+            id="memorialVideo"
+            controls
+            playsinline
+            preload="metadata"
+            poster="assets/video/poster.jpg"
+          >
+            <source src="assets/video/memorial.mp4" type="video/mp4" />
+            您的浏览器不支持视频播放，请更新浏览器后重试。
+          </video>
+        </div>
+
+        <p class="video-caption reveal">山 河 常 在 · 思 念 长 存</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ 模块6：页脚片尾 ============ -->
+  <footer class="footer" id="footer">
+    <div class="container narrow">
+      <div class="footer-divider reveal"><span></span></div>
+      <div class="footer-text">
+        <p class="reveal">走遍滇山湖水，沿途定格一家人的欢声笑语。</p>
+        <p class="reveal">旧照片藏着岁月，藏着一生勤恳、温柔坦荡的您。</p>
+        <p class="reveal">山河常在，思念长存，您永远留在我们心底。</p>
+      </div>
+
+      <div class="footer-sign reveal">
+        <p class="sign-line">摄制：全家同行旅途留念</p>
+        <p class="sign-line">致我最敬重的父亲</p>
+        <p class="sign-line sign-date">2026年夏 · 古蔺</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ 灯箱 Lightbox ============ -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lb-close" id="lbClose" aria-label="关闭">&times;</button>
+    <button class="lb-nav lb-prev" id="lbPrev" aria-label="上一张">&#8249;</button>
+    <button class="lb-nav lb-next" id="lbNext" aria-label="下一张">&#8250;</button>
+    <figure class="lb-figure">
+      <img class="lb-image" id="lbImage" src="" alt="" />
+      <figcaption class="lb-caption" id="lbCaption"></figcaption>
+    </figure>
+  </div>
+
+  <script src="./js/data.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
