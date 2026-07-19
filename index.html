@@ -1011,24 +1011,12 @@ const ALBUM_DATA = {
   original: [
     { src: "assets/images/original/01.jpg", label: "壹", note: "少年模样 · 岁月初留影" },
     { src: "assets/images/original/02.jpg", label: "贰", note: "青年立志 · 风华正茂时" },
-    { src: "assets/images/original/03.jpg", label: "叁", note: "成家立业 · 撑起一方天" },
-    { src: "assets/images/original/04.jpg", label: "肆", note: "中年从容 · 沉稳如山岳" },
-    { src: "assets/images/original/05.jpg", label: "伍", note: "与家人行 · 欢声笑语间" },
-    { src: "assets/images/original/06.jpg", label: "陆", note: "晚年慈祥 · 鬓染霜雪色" },
-    { src: "assets/images/original/07.jpg", label: "柒", note: "旧友重逢 · 岁月不曾改" },
-    { src: "assets/images/original/08.jpg", label: "捌", note: "独坐庭前 · 静观云卷舒" },
-    { src: "assets/images/original/09.jpg", label: "玖", note: "旅途留痕 · 山河入心怀" }
+    { src: "assets/images/original/03.jpg", label: "叁", note: "成家立业 · 撑起一方天" }
   ],
   restored: [
     { src: "assets/images/restored/01.jpg", label: "壹", note: "少年模样 · 上色珍藏" },
     { src: "assets/images/restored/02.jpg", label: "贰", note: "青年立志 · 上色珍藏" },
-    { src: "assets/images/restored/03.jpg", label: "叁", note: "成家立业 · 上色珍藏" },
-    { src: "assets/images/restored/04.jpg", label: "肆", note: "中年从容 · 上色珍藏" },
-    { src: "assets/images/restored/05.jpg", label: "伍", note: "与家人行 · 上色珍藏" },
-    { src: "assets/images/restored/06.jpg", label: "陆", note: "晚年慈祥 · 上色珍藏" },
-    { src: "assets/images/restored/07.jpg", label: "柒", note: "旧友重逢 · 上色珍藏" },
-    { src: "assets/images/restored/08.jpg", label: "捌", note: "独坐庭前 · 上色珍藏" },
-    { src: "assets/images/restored/09.jpg", label: "玖", note: "旅途留痕 · 上色珍藏" }
+    { src: "assets/images/restored/03.jpg", label: "叁", note: "成家立业 · 上色珍藏" }
   ]
 };
 
@@ -1262,7 +1250,21 @@ const PLACEHOLDER_SVG = `
     items.forEach(function (el) { observer.observe(el); });
   }
 
-  /* ---------- 6. 视频懒加载与柔光 ---------- */
+  /* ---------- 6. 加载 moments 模块背景图 ---------- */
+  function initMoments() {
+    const momentImgs = document.querySelectorAll(".moment-img");
+    momentImgs.forEach(function (el) {
+      const src = el.dataset.src;
+      if (!src) return;
+      const img = new Image();
+      img.onload = function () {
+        el.style.backgroundImage = "url('" + src + "')";
+      };
+      img.src = src;
+    });
+  }
+
+  /* ---------- 7. 视频懒加载与柔光 ---------- */
   function initVideo() {
     const video = document.getElementById("memorialVideo");
     if (!video) return;
@@ -1280,7 +1282,7 @@ const PLACEHOLDER_SVG = `
     }
   }
 
-  /* ---------- 7. 首屏背景尝试加载视频/图片 ---------- */
+  /* ---------- 8. 首屏背景尝试加载视频/图片 ---------- */
   function initHeroBg() {
     const heroBg = document.querySelector(".hero-bg");
     if (!heroBg) return;
@@ -1312,6 +1314,7 @@ const PLACEHOLDER_SVG = `
     initTabs();
     lightbox.init();
     bindImageClicks();
+    initMoments();
     initVideo();
     initHeroBg();
     // 渲染后再观察滚动渐入
